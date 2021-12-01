@@ -4,11 +4,11 @@ public enum Status {
 	ABERTO(0, "ABERTO"), ANDAMENTO(1, "ANDAMENTO"), ENCERRADO(2, "ENCERRADO");
 
 	private Integer codigo;
-	private String descrição;
+	private String descricao;
 
-	private Status(Integer codigo, String descrição) {
+	private Status(Integer codigo, String descricao) {
 		this.codigo = codigo;
-		this.descrição = descrição;
+		this.descricao = descricao;
 	}
 
 	public Integer getCodigo() {
@@ -16,7 +16,7 @@ public enum Status {
 	}
 
 	public String getDescrição() {
-		return descrição;
+		return descricao;
 	}
 
 	public static Status toEnum(Integer cod) {

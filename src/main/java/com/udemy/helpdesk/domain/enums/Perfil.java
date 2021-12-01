@@ -4,19 +4,19 @@ public enum Perfil {
 	ADMIN(0, "ROLE_ADMIN"), CLIENTE(1, "ROLE_CLIENTE"), TECNICO(2, "ROLE_TECNICO");
 
 	private Integer codigo;
-	private String descrição;
+	private String descricao;
 
 	private Perfil(Integer codigo, String descrição) {
 		this.codigo = codigo;
-		this.descrição = descrição;
+		this.descricao = descricao;
 	}
 
 	public Integer getCodigo() {
 		return codigo;
 	}
 
-	public String getDescrição() {
-		return descrição;
+	public String getDescricao() {
+		return descricao;
 	}
 
 	public static Perfil toEnum(Integer cod) {

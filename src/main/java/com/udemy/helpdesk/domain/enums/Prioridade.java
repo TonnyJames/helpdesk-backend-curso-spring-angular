@@ -4,19 +4,19 @@ public enum Prioridade {
 	BAIXA(0, "BAIXA"), MEDIA(1, "MEDIA"), ALTA(2, "ALTA");
 
 	private Integer codigo;
-	private String descrição;
+	private String descricao;
 
 	private Prioridade(Integer codigo, String descrição) {
 		this.codigo = codigo;
-		this.descrição = descrição;
+		this.descricao = descricao;
 	}
 
 	public Integer getCodigo() {
 		return codigo;
 	}
 
-	public String getDescrição() {
-		return descrição;
+	public String getDescricao() {
+		return descricao;
 	}
 
 	public static Prioridade toEnum(Integer cod) {
