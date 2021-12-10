@@ -3,6 +3,8 @@ package com.udemy.helpdesk.domain.dtos;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.udemy.helpdesk.domain.Chamado;
 
@@ -14,11 +16,17 @@ public class ChamadoDTO implements Serializable {
 	private LocalDate dataAbertura = LocalDate.now();
 	@JsonFormat(pattern = "dd/MM/yyy")
 	private LocalDate dataFechamento;
+	@NotNull(message = "O campo PRIORIDADE é requerido")
 	private Integer prioridade;
-	private Integer satatus;
+	@NotNull(message = "O campo STATUS é requerido")
+	private Integer status;
+	@NotNull(message = "O campo TITULO é requerido")
 	private String titulo;
+	@NotNull(message = "O campo OBSERVAÇÕES é requerido")
 	private String observações;
+	@NotNull(message = "O campo TECNICO é requerido")
 	private Integer tecnico;
+	@NotNull(message = "O campo CLIENTE é requerido")
 	private Integer cliente;
 	private String nomeTecnico;
 	private String nomeCliente;
@@ -33,7 +41,7 @@ public class ChamadoDTO implements Serializable {
 		this.dataAbertura = obj.getDataAbertura();
 		this.dataFechamento = obj.getDataFechamento();
 		this.prioridade = obj.getPrioridade().getCodigo();
-		this.satatus = obj.getSatatus().getCodigo();
+		this.status = obj.getStatus().getCodigo();
 		this.titulo = obj.getTitulo();
 		this.observações = obj.getObservações();
 		this.tecnico = obj.getTecnico().getId();
@@ -74,12 +82,12 @@ public class ChamadoDTO implements Serializable {
 		this.prioridade = prioridade;
 	}
 
-	public Integer getSatatus() {
-		return satatus;
+	public Integer getStatus() {
+		return status;
 	}
 
-	public void setSatatus(Integer satatus) {
-		this.satatus = satatus;
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 
 	public String getTitulo() {

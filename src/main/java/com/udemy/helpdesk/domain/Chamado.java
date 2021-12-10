@@ -30,7 +30,7 @@ public class Chamado implements Serializable {
 	
 	
 	private Prioridade prioridade;
-	private Status satatus;
+	private Status status;
 	private String titulo;
 	private String observações;
 	
@@ -46,12 +46,12 @@ public class Chamado implements Serializable {
 		super();
 	}
 
-	public Chamado(Integer id, Prioridade prioridade, Status satatus, String titulo, String observações,
+	public Chamado(Integer id, Prioridade prioridade, Status status, String titulo, String observações,
 			Tecnico tecnico, Cliente cliente) {
 		super();
 		this.id = id;
 		this.prioridade = prioridade;
-		this.satatus = satatus;
+		this.status = status;
 		this.titulo = titulo;
 		this.observações = observações;
 		this.tecnico = tecnico;
@@ -90,12 +90,12 @@ public class Chamado implements Serializable {
 		this.prioridade = prioridade;
 	}
 
-	public Status getSatatus() {
-		return satatus;
+	public Status getStatus() {
+		return status;
 	}
 
-	public void setSatatus(Status satatus) {
-		this.satatus = satatus;
+	public void setStatus(Status status) {
+		this.status = status;
 	}
 
 	public String getTitulo() {
